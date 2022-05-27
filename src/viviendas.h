@@ -8,6 +8,7 @@
 #ifndef VIVIENDAS_H_
 #define VIVIENDAS_H_
 
+#include "censistas.h"
 typedef struct {
 	int idVivienda;
 	char calle[25];
@@ -62,7 +63,7 @@ int encontrarId(eVivienda *lista, int tamanio, int idVivienda);
 /// @param tamanio
 /// @param idVivienda
 /// @return en caso de borrarlo devuelve 0, en caso de no hacerlo devuelve -1
-int borrarVivienda(eVivienda *lista,int tamanio,int idVivienda);
+int borrarVivienda(eVivienda *lista, int tamanio, int idVivienda);
 /// @fn int ordenarViviendas(eVivienda*, int)
 /// @brief ordena las viviendas segun sus calles, en caso de igualdad segun su cantidad de personas
 ///
@@ -71,11 +72,14 @@ int borrarVivienda(eVivienda *lista,int tamanio,int idVivienda);
 /// @return
 int ordenarViviendas(eVivienda *lista, int tamanio);
 /// @fn int listarViviendas(eVivienda*, int)
-/// @brief muestra todas las viviendas existentes
+/// @brief muestra todas las viviendas existentes y luego del la segunda parte, tambien los censistas
 ///
 /// @param lista
 /// @param tamanio
 /// @return
-int listarViviendas(eVivienda *lista,int tamanio);
+int listarViviendasYCensistas(eVivienda *lista, eCensista *listaDos,
+		int tamanio);
+int censistasMasCensos(eCensista *lista,eVivienda *listaDos, int tamanio);
+
 
 #endif /* VIVIENDAS_H_ */

@@ -288,7 +288,7 @@ int main(void) {
 				printf("\n\n\n--------------------------\n\n\n");
 				printf("\nUsted ha seleccionado la opcion 4.LISTAR VIVENDAS\n");
 				ordenarViviendas(viviendas, longitud);
-				listarViviendas(viviendas, longitud);
+				listarViviendasYCensistas(viviendas, censistas, longitud);
 			} else {
 				printf("\n\n<Faltan datos o no se selecciono la opcion 1>\n");
 			}
@@ -298,6 +298,7 @@ int main(void) {
 			printf("\n\n\n--------------------------\n\n\n");
 			printf("\nUsted ha seleccionado la opcion 5.LISTAR CENSISTAS\n");
 			listarCensistas(censistas, 3);
+			censistasMasCensos(censistas,viviendas, longitud);
 			break;
 		case 6:
 			printf("\n\n\n--------------------------\n\n\n");
